@@ -1,0 +1,32 @@
+[DEFAULT]
+rndSeed=2
+simTime=10
+tcpBufferMultiplicator=3
+baseBW=100Mbps
+nTCP=1
+schedQueueDiscSize=190KB
+# SendingDataRate=100Mbps
+PacketSize=1400
+flownum=1
+
+numNodes=3
+
+
+[WiFi]
+# not implemeneted yet
+AP=1
+clients=0,2
+
+# Tapo cameras use varying bandwidth, but expect roughly 1-2 Mbps for 1080p streaming
+
+[Camera-to-UE]
+# interval_ms = packetsize_byte * 8 / rate_Mbps * 1000
+traffic=0-2
+interval_ms=6
+max_packet=0
+packetsize_byte=1500
+
+[AppRateChange]
+# format: traffic1;time_s;pktSendInterval_ms,link2;time_s;pktSendInterval_ms
+cameraApp=0-2;2;12,0-2;4;8,0-2;6;12,0-2;8;6
+sensorApp=

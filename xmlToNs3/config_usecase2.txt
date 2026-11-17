@@ -1,0 +1,25 @@
+[DEFAULT]
+rndSeed=2
+simTime=10
+tcpBufferMultiplicator=3
+baseBW=100Mbps
+nTCP=1
+schedQueueDiscSize=190KB
+# SendingDataRate=100Mbps
+PacketSize=1400
+flownum=1
+
+numNodes=3
+
+
+[5GNR]
+# ; separated the groups of UEs
+serverNodes=0;
+UEs=1,2;
+
+
+[5Gtraffic]
+ARtraffic=
+VRtraffic=1-2
+CGtraffic=
+
